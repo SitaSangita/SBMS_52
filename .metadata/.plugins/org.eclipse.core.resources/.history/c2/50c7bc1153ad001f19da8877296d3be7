@@ -1,0 +1,19 @@
+package in.ashokit;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import in.ashokit.service.EmployeeService;
+
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext ctxt = SpringApplication.run(Application.class, args);
+		EmployeeService employeeService = ctxt.getBean(EmployeeService.class);
+		//employeeService.addEmployee(101,"Sita","CTC",2500.00);
+		employeeService.updateSalary(101,"Sangita","Odisha",3000.00);
+	}
+
+}

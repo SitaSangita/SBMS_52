@@ -1,0 +1,15 @@
+package com.ashokit.beans;
+
+public class SpringLifeCycle {
+
+	public void doStart(){
+		System.out.println("Spring Life Cycle started");
+	}
+	
+	public void doService() {
+		System.out.println("Service method started");
+	}
+	public void destroy() {
+		System.out.println("Spring object destroy");
+	}
+}

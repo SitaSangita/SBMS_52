@@ -1,0 +1,8 @@
+package com.ashokit.beans;
+
+import java.io.IOException;
+
+public interface IStudentDao {
+
+	void exportDataToExcel(String query, String filePath) throws IOException;
+}

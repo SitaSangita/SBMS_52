@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    
+    
+    <bean id="sp" class="com.ashokit.beans.SonyPrinter" primary="true"/>
+    <bean id="hp" class="com.ashokit.beans.HPPrinter"/>
+    <bean id="atm" class="com.ashokit.beans.ATM" autowire="byName"/>
+
+</beans>

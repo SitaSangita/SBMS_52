@@ -1,0 +1,16 @@
+package com.ashokit.beans;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class IStudentDaoImpl implements IStudentDao{
+	private JdbcTemplate jdbcTemplate;
+	public IStudentDaoImpl(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate=jdbcTemplate;
+	}
+	@Override
+	public void importDataToExcel(Integer sId,String sName,String course) {
+		
+	}
+	
+
+}

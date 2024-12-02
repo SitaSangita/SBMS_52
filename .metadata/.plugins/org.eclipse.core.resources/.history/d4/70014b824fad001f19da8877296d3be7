@@ -1,0 +1,26 @@
+package in.ashokit.service;
+
+import org.springframework.stereotype.Service;
+
+import in.ashokit.repo.EmployeeRepo;
+
+@Service
+public class EmployeeService {
+	private EmployeeRepo empRepo;
+	
+	public EmployeeService(EmployeeRepo empRepo) {
+		this.empRepo=empRepo;
+	}
+	public void addEmployee(Integer id ,String name, String location, Double salary) {
+        empRepo.insertEmployee(id,name, location, salary);
+    }
+
+    public void updateSalary(Integer id, Double newSalary) {
+        empRepo.updateEmployeeSalary(newSalary, id);
+    }
+
+    public void removeEmployee(Integer id) {
+        empRepo.deleteEmployeeById(id);
+    }
+
+}

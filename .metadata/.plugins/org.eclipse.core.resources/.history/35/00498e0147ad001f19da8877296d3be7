@@ -1,0 +1,29 @@
+package in.ashokit.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import in.ashokit.repo.EmployeeRepo;
+import jakarta.transaction.Transactional;
+
+@Service
+public class EmployeeService {
+	private EmployeeRepo empRepo;
+	@Autowired
+	public EmployeeService(EmployeeRepo empRepo) {
+		this.empRepo=empRepo;
+	}
+	@Transactional
+	public void addEmployee(Integer id ,String name, String location, Double salary) {
+        empRepo.insertEmployee(id,name, location, salary);
+    }
+
+    public void updateSalary(Integer id, Double newSalary) {
+        empRepo.updateEmployeeSalary(newSalary, id);
+    }
+
+    public void removeEmployee(Integer id) {
+        empRepo.deleteEmployeeById(id);
+    }
+
+}

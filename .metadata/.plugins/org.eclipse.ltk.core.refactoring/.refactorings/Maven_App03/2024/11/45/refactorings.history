@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;ctxt2&apos; from expression &apos;ctxt&apos;&#x0D;&#x0A;- Original project: &apos;Maven_App03&apos;&#x0D;&#x0A;- Variable name: &apos;ctxt2&apos;&#x0D;&#x0A;- Destination method: &apos;com.nt.Core.StudentDitails.main(...)&apos;&#x0D;&#x0A;- Variable expression: &apos;ctxt&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;ctxt2&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.nt.Core{StudentDitails.java" name="ctxt2" replace="true" replaceAllInThisFile="false" selection="549 4" stamp="1730975694072" varType="false" version="1.0"/>
+</session>

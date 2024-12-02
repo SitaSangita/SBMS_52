@@ -1,0 +1,17 @@
+package com.ashokit.idao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class IVehcileDaoImpl implements IVehcileDao{
+
+	private JdbcTemplate jdbcTemplate;
+	public IVehcileDaoImpl() {
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public void saveVechile() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

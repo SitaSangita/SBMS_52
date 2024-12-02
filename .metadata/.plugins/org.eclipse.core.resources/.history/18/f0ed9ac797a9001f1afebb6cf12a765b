@@ -1,0 +1,8 @@
+spring.application.name=04_SpringBoot_Data_JPA_Oracle
+
+spring.main.banner-mode=log
+
+spring.datasource.url=jdbc:orracle:thin:@localhost:1521:xe
+spring.datasource.username=system
+spring.datasource.password=Manager
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver

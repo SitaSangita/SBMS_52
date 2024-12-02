@@ -1,0 +1,18 @@
+package com.ashokit.pdf;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.List;
+
+import com.itextpdf.text.pdf.PdfWriter;
+
+import comashokit.pojo.Student;
+
+public class GeneratePDF_File {
+	public void generatePdf(List<Student> students) throws Exception {
+		File f=new File("Students.pdf");
+		FileOutputStream fos=new FileOutputStream(f);
+		PdfWriter writer=new PdfWriter(fos);
+	}
+
+}

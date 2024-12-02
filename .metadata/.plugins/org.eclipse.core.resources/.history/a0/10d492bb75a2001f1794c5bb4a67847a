@@ -1,0 +1,17 @@
+package com.ashokit.dao;
+
+public class IVehcileDaoImpl implements IVehcileDao{
+
+	public IVehcileDaoImpl() {
+
+		System.out.println("IVehcileDaoImpl ::Constructor");
+	}
+
+	@Override
+	public void retriveData(Integer vId, String vName, Double vPrice) {
+
+		String query="Select * from vehcile";
+	}
+	
+
+}

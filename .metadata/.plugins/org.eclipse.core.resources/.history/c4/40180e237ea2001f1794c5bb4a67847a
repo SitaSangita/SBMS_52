@@ -1,0 +1,14 @@
+package com.ashokit.service;
+
+import com.ashokit.dao.IVehcileDao;
+
+public class ExcelReportService {
+	private IVehcileDao iVehcileDao;
+	
+	public ExcelReportService(IVehcileDao iVehcileDao) {
+		this.iVehcileDao=iVehcileDao;
+		System.out.println("ExcelReportService::Constructor");
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package in.ashokit.service;
+
+import in.ashokit.repo.EmployeeRepo;
+
+public class EmployeeService {
+	private EmployeeRepo empRepo;
+	
+	public EmployeeService(EmployeeRepo empRepo) {
+		this.empRepo=empRepo;
+	}
+	public void addEmployee(Integer id ,String name, String department, Double salary) {
+        empRepo.insertEmployee(name, department, salary);
+    }
+
+    public void updateSalary(Integer id, Double newSalary) {
+        empRepo.updateEmployeeSalary(newSalary, id);
+    }
+
+    public void removeEmployee(Integer id) {
+        empRepo.deleteEmployeeById(id);
+    }
+
+}

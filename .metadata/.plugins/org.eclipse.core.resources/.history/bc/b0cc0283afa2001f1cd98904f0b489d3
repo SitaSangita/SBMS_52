@@ -1,0 +1,23 @@
+package com.ashokit.service;
+
+import java.io.IOException;
+
+import com.ashokit.beans.IStudentDaoImpl;
+
+public class StudentService {
+	private IStudentDaoImpl iStudentDaoImpl;
+	public StudentService(IStudentDaoImpl iStudentDaoImpl) {
+		this.iStudentDaoImpl=iStudentDaoImpl;
+	}
+	 public String exportToExcel() {
+	        String query = "SELECT * FROM STUDENT"; // Replace with your actual query
+	        String filePath = "D:\\AshokIT\\DatabaseData.xlsx";
+	        try {
+	            iStudentDaoImpl.exportDataToExcel(query, filePath);
+	            return "Data exported to Excel file at " + filePath;
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	            return "Failed to export data to Excel.";
+	        }
+	
+}

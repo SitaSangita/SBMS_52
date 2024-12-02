@@ -1,0 +1,20 @@
+package com.ashokit.excel;
+
+import java.util.List;
+
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.streaming.SXSSFWorkbook;
+
+import comashokit.pojo.Student;
+
+public class ExcelFileGenerator {
+	public ExcelFileGenerator() {
+
+		System.out.println("ExcelFileGenerator");
+	}
+	public void excelFileGenerator(List<Student> student) {
+		SXSSFWorkbook workBook=new SXSSFWorkbook();
+		Sheet sheet=new 
+	}
+
+}

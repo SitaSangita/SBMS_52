@@ -1,0 +1,7 @@
+package com.ashokit.dao;
+
+public interface IVehcileDao {
+	void retriveData(Integer vId, String vName,Double vPrice);
+
+	
+}

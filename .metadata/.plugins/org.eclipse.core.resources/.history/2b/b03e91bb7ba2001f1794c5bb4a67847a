@@ -1,0 +1,28 @@
+package com.ashokit.dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.ashokit.dto.Vehcile;
+
+public class IVehcileDaoImpl implements IVehcileDao{
+
+	private JdbcTemplate jdbcTamplate;
+	public IVehcileDaoImpl(JdbcTemplate jdbcTemplate) {
+
+		this.jdbcTamplate=jdbcTemplate;
+		System.out.println("IVehcileDaoImpl ::Constructor");
+	}
+
+	@Override
+	public void retriveData(Vehcile vehcile) {
+
+		String sql="Select vId,vName,vPrice from vehcile";
+		jdbcTamplate.query(sql,ps->{
+			
+			
+		});
+		
+	}
+	
+
+}

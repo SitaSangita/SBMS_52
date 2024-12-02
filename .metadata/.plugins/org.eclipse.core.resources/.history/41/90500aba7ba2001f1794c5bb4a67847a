@@ -1,0 +1,7 @@
+package com.ashokit.dao;
+
+import com.ashokit.dto.Vehcile;
+
+public interface IVehcileDao {
+	void retriveData(Vehcile vehcile);
+}

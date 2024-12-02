@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="cd" class="com.ashokit.beans.CreditCard"/>
+	
+	<bean id="dd" class="com.ashokit.beans.DebitCard"/>
+	
+	<bean id="us" class="com.ashokit.beans.UPIScanner"/>
+	
+	<bean id="re" class="com.ashokit.beans.Resturant" >
+	
+	<constructor-arg name="epm" ref="us"/>
+	<constructor-arg name="sts" value="Sita"/>
+	</bean>
+	
+</beans>

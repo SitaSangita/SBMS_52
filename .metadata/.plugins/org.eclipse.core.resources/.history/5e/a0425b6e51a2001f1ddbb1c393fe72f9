@@ -1,0 +1,8 @@
+package com.ashokit.beans;
+
+public class VehcileService {
+	public VehcileService() {
+		System.out.println("Vehcile::Constructor");
+	}
+
+}

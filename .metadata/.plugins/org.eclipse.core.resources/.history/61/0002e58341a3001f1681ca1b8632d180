@@ -1,0 +1,8 @@
+package com.ashokit.beans;
+
+import java.io.IOException;
+
+public interface IStudentDao {
+
+	void inserDataInDataBase(Integer sid,String sName,String location);
+}

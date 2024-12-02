@@ -1,0 +1,19 @@
+package com.ashokit.myapp;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.ashokit.service.ExcelReportService;
+
+public class MyApp {
+
+	public static void main(String[] args) {
+
+		System.out.println("Main Started");
+		ApplicationContext ctxt=
+				new ClassPathXmlApplicationContext("Beans.xml");
+		ExcelReportService excelReportService = ctxt.getBean(ExcelReportService.class);
+		excelReportService.exportVehcileToExcel();
+	}
+
+}

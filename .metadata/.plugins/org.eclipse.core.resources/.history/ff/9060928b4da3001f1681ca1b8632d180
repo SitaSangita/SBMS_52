@@ -1,0 +1,15 @@
+package com.ashokit.pdf;
+
+import java.io.FileOutputStream;
+
+import com.itextpdf.text.Document;
+import com.itextpdf.text.pdf.PdfWriter;
+
+public class GeneratePDF_File {
+	public void generatePdfFile() {
+		Document document=new Document();
+		PdfWriter.getInstance(document, new FileOutputStream(getPdfNameWithDate()));
+		document.open();
+	}
+
+}

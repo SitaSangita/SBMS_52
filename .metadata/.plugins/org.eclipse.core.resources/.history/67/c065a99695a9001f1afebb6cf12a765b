@@ -1,0 +1,6 @@
+spring.application.name=04_SpringBoot_Data_JPA_Oracle
+
+
+spring.datasource.url=jdbc:orracle:thin:@localhost:1521:xe
+spring.datasource.username=system
+spring.datasource.password=Manager

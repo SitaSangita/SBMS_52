@@ -1,0 +1,19 @@
+package in.ashokit.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import in.ashokit.entity.Person;
+import in.ashokit.repo.PersonRepo;
+
+@Service
+public class PersonService {
+	@Autowired
+	private PersonRepo personRepo;
+	
+	public void savePerson() {
+		Person p=new Person();
+	}
+	
+
+}

@@ -1,0 +1,5 @@
+package com.ashokit.idao;
+
+public interface IVechileDao {
+
+}

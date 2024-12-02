@@ -1,0 +1,15 @@
+package com.ashokit.dao;
+
+public class IVehcileDaoImpl implements IVehcileDao{
+
+	public IVehcileDaoImpl() {
+
+		System.out.println("IVehcileDaoImpl ::Constructor");
+	}
+	@Override
+	public void retriveData() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

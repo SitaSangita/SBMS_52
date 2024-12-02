@@ -1,0 +1,11 @@
+package com.ashokit.service;
+
+import com.ashokit.beans.IStudentDaoImpl;
+
+public class StudentService {
+	private IStudentDaoImpl iStudentDaoImpl;
+	public StudentService(IStudentDaoImpl iStudentDaoImpl) {
+		this.iStudentDaoImpl=iStudentDaoImpl;
+	}
+
+}

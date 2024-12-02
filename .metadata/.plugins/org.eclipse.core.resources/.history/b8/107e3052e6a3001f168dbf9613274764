@@ -1,0 +1,6 @@
+package com.ashokit.pdf;
+
+public interface CommandLineRunner {
+	void run(String...str);
+
+}

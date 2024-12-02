@@ -1,0 +1,8 @@
+package com.ashokit.dto;
+
+public class Vehcile {
+	private int vId;
+	private String vName;
+	private Double vPrice;
+
+}

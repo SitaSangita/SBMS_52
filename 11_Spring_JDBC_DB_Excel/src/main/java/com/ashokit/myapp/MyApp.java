@@ -1,0 +1,20 @@
+package com.ashokit.myapp;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.ashokit.service.StudentService;
+
+public class MyApp {
+
+	public static void main(String[] args) throws Exception {
+
+		ApplicationContext ctxt=
+				new ClassPathXmlApplicationContext("Beans.xml");
+		StudentService studentService = ctxt.getBean(StudentService.class);
+		//studentService.getFileData("Student.txt");//For storing text data into mysql data base
+		//studentService.getStudents();// retiving data from mysql and createa excel for this data
+		studentService.generatePdf();
+	}
+
+}

@@ -1,0 +1,29 @@
+package in.ashokit.service;
+
+import org.springframework.stereotype.Service;
+
+import in.ashokit.entity.User;
+import in.ashokit.repo.UserRepo;
+
+@Service
+public class UserService {
+	private UserRepo userRepo;
+	
+	public UserService(UserRepo userRepo) {
+		this.userRepo=userRepo;
+	}
+	public void deleteUser(Integer uId){
+		userRepo.deleteById(uId);
+	}
+		
+		public void saveUser() {
+	
+		 User u=new User();
+		 u.setId(102);
+		 u.setName("Jayasree");
+		 u.setGender("Female");
+		 u.setCountry("India");
+		 userRepo.save(u);
+	 }
+
+}

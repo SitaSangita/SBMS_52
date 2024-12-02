@@ -1,0 +1,21 @@
+package com.ashokit.myapp;
+
+import java.io.IOException;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.ashokit.service.StudentService;
+
+public class MyApp {
+
+	public static void main(String[] args) throws IOException {
+
+		ApplicationContext ctxt=
+				new ClassPathXmlApplicationContext("Beans.xml");
+		StudentService studentService = ctxt.getBean(StudentService.class);
+		//studentService.getFileData("Student.txt");
+		studentService.getStudents();
+	}
+
+}

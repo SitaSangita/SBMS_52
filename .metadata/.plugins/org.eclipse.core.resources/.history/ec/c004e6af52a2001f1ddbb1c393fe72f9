@@ -1,0 +1,12 @@
+package com.ashokit.idao;
+
+public class IVehcileDaoImpl implements IVehcileDao{
+
+	
+	@Override
+	public void saveVechile() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

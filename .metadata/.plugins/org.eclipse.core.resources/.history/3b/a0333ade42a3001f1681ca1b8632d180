@@ -1,0 +1,9 @@
+package com.ashokit.mapper;
+
+import javax.swing.tree.RowMapper;
+import javax.swing.tree.TreePath;
+
+public class StudentRowMapper implements RowMapper<Student>{
+
+	
+}

@@ -1,0 +1,26 @@
+package com.ashokit.service;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import com.ashokit.beans.IStudentDaoImpl;
+
+public class StudentService {
+	private IStudentDaoImpl iStudentDaoImpl;
+	public StudentService(IStudentDaoImpl iStudentDaoImpl) {
+		this.iStudentDaoImpl=iStudentDaoImpl;
+	}
+	public void getFileData(String filePath) throws IOException {
+		File f=new File(filePath);
+		FileReader fr=new FileReader(f);
+		BufferedReader br=new BufferedReader(fr);
+		String line = br.readLine();
+		while(line !=null) {
+			System.out.println(line);
+			line=br.readLine();
+		}
+	}
+}

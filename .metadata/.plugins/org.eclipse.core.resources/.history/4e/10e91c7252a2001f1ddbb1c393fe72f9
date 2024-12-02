@@ -1,0 +1,6 @@
+package com.ashokit.idao;
+
+public interface IVehcileDao {
+	void saveVechile();
+
+}

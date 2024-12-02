@@ -1,0 +1,9 @@
+spring.application.name=05_SpringBoot_DATAJPA_MYSQL
+
+spring.main.banner-mode=log
+spring.datasource.url=jdbc:mysql://localhost:3306:springdatabase
+spring.datasource.username=root
+spring.datasource.password=root
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true

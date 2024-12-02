@@ -1,0 +1,11 @@
+package com.ashokit.pdf;
+
+public class PDFGeneratorRunner implements CommandLineRunner {
+
+	@Override
+	public void run(String... str) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

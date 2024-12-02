@@ -1,0 +1,78 @@
+package com.ashokit.beans;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class IStudentDaoImpl implements IStudentDao{
+	private JdbcTemplate jdbcTemplate;
+	public IStudentDaoImpl(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate=jdbcTemplate;
+	}
+	@Override
+	public void exportDataToExcel(String query, String filePath) throws IOException {
+			// Execute query and retrieve data from the database
+	        List<Map<String, Object>> rows = jdbcTemplate.queryForList(query);
+
+	        // Create an Excel workbook and sheet
+	        Workbook workbook = new XSSFWorkbook();
+	        Sheet sheet = workbook.createSheet("Student");
+
+	        // Check if data is available to create headers
+	        if (!rows.isEmpty()) {
+	            // Create header row based on column names
+	            Row headerRow = sheet.createRow(0);
+	            Map<String, Object> firstRow = rows.get(0);
+	            int headerColIndex = 0;
+	            for (String columnName : firstRow.keySet()) {
+	                Cell cell = headerRow.createCell(headerColIndex++);
+	                cell.setCellValue(columnName);
+	                cell.setCellStyle(createHeaderCellStyle(workbook));
+	            }
+	        }
+
+	        // Populate data rows
+	        int rowIndex = 1;
+	        for (Map<String, Object> rowData : rows) {
+	            Row row = sheet.createRow(rowIndex++);
+	            int columnIndex = 0;
+	            for (Object value : rowData.values()) {
+	                Cell cell = row.createCell(columnIndex++);
+	                if (value != null) { 
+	                	cell.setCellValue(value.toString());
+	                }
+	            }
+	        }
+	        // Auto-size columns for better readability
+	        for (int i = 0; i < sheet.getRow(0).getLastCellNum(); i++) {
+	            sheet.autoSizeColumn(i);
+	        }
+
+	        // Write the workbook to an output file
+	        try (FileOutputStream fileOut = new FileOutputStream(filePath)) {
+	            workbook.write(fileOut);
+	            System.out.println("Data successfully exported to Excel.");
+	        } 
+	        catch(Exception p){
+	        	p.printStackTrace();
+	        }
+	        finally {
+	        	workbook.close();
+	        }
+	}
+	 private CellStyle createHeaderCellStyle(Workbook workbook) {
+	            CellStyle style = workbook.createCellStyle();
+	            Font font = workbook.createFont();
+	            font.setBold(true);
+	            style.setFont(font);
+	            return style;
+	        }
+}

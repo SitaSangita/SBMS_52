@@ -1,0 +1,29 @@
+package in.ashokit.repo;
+
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import in.ashokit.entity.Employee;
+
+
+public interface EmployeeRepo extends CrudRepository<Employee, Integer>{
+	   
+	
+		@Modifying
+		@Query(value = "INSERT INTO Emp_tbl (eid,name,location, salary) VALUES (:id,:name,:location,:salary)", nativeQuery = true)
+	    void insertEmployee(Integer id,String name, String location, Double salary);
+
+		/*
+		 * // Custom UPDATE
+		 * 
+		 * @Query("UPDATE Emp_Info e SET e.salary = ?1 WHERE e.id = ?2") void
+		 * updateEmployeeSalary(Double salary,Integer id);
+		 * 
+		 * // Custom DELETE
+		 * 
+		 * @Query("DELETE FROM Emp_Info e WHERE e.id = ?1") void
+		 * deleteEmployeeById(Integer id);
+		 */
+
+}
