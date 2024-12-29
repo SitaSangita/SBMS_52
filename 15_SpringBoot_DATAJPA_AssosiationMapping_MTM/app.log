@@ -1,0 +1,2 @@
+2024-12-09T12:37:04.401+05:30  WARN 18480 --- [15_SpringBoot_DATAJPA_AssosiationMapping_MTM] [main] in.ashokit.log.UserLoggingService        : This is warn msg
+2024-12-09T12:37:04.404+05:30 ERROR 18480 --- [15_SpringBoot_DATAJPA_AssosiationMapping_MTM] [main] in.ashokit.log.UserLoggingService        : This is error msg

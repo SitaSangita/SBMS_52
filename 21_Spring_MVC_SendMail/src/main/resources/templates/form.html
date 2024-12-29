@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Send Mail</title>
+</head>
+<body>
+    <h2>Send Mail</h2>
+
+    <div th:if="${success}" style="color: green;">[[${success}]]</div>
+    <div th:if="${error}" style="color: red;">[[${error}]]</div>
+
+    <form th:action="@{/sendMail}" th:object="${email}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" th:field="*{name}" required/><br/>
+
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" th:field="*{gender}" required/><br/>
+
+        <label for="phno">Phone:</label>
+        <input type="number" id="phno" th:field="*{phno}" required/><br/>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" th:field="*{email}" required/><br/>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" th:field="*{subject}" required/><br/>
+
+        <label for="message">Message:</label>
+        <textarea id="message" th:field="*{message}" required></textarea><br/>
+
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
